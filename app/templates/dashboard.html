@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Dashboard</title>
+    <link rel="stylesheet" href="static/css/dashboardStyle.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <h1>Application Dashboard</h1>
+        <div class="section upload-documents">
+            <h2>Upload Documents</h2>
+            <form method = "POST" action="/dashboard">
+                <label for="resume-upload">Upload Resume:</label>
+                <textarea id="resume-upload" name="resume-upload"></textarea><br>
+                <label for="cover-upload">Upload Cover Letter:</label>
+                <textarea id="cover-upload" name="cover-upload"></textarea><br>
+                <button type="submit">Upload</button>
+            </form>
+        </div>
+        <div class="section check-status">
+            <h2>Check Application Status</h2>
+            <p>Application Status: {{ app_status }}</p>
+        </div>
+        <div class="section post-module">
+            <h2>Modules Posted By Employer</h2>
+            <form>
+                <label for="module-url">Module URL:</label>
+                <a href="url" id="module-url">no_link_available</a>><br>
+                <label for="module-description">Description:</label>
+                <p id="module-description">No module yet posted from the employer. When a module is posted this is where you will be able to view it</p><br>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+
